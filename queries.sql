@@ -34,15 +34,14 @@ JOIN artists
     ON song_artists.artist_id = artists.artist_id
 ORDER BY songs.song_name, artists.artist_name;
 
--- 6. Find all songs by a particular artist.
--- Replace 'Taylor Swift' with an artist in your database.
+-- 6. Find all songs by Luna Grey.
 SELECT songs.song_name, songs.release_date, songs.total_stream
 FROM songs
 JOIN song_artists
     ON songs.song_id = song_artists.song_id
 JOIN artists
     ON song_artists.artist_id = artists.artist_id
-WHERE artists.artist_name = 'Taylor Swift'
+WHERE artists.artist_name = 'Luna Grey'
 ORDER BY songs.total_stream DESC;
 
 -- 7. Count the songs in each album, including empty albums.
